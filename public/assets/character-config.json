@@ -1,0 +1,1613 @@
+{
+  "$comment": "Mutable runtime database for Character Gym. Source frame dimensions mirror the measured asset catalog and are read-only in the UI. Display size, scale, origin, offset, playback and bounds are editable per animation. Offsets use source-facing pixels: +x follows the character facing and +y moves downward.",
+  "version": 1,
+  "characters": {
+    "operator": {
+      "facing": "right",
+      "stage": {
+        "groundY": 100
+      },
+      "motion": {
+        "runSpeed": 180,
+        "jumpHeight": 150
+      },
+      "projectile": {
+        "assetKey": "operator-bullet",
+        "impactAssetKey": "operator-bullet-impact",
+        "speed": 520,
+        "edgePadding": 24,
+        "spawnOffset": {
+          "x": 0,
+          "y": 0
+        },
+        "emitSourceCell": 1
+      },
+      "testLevel": {
+        "scale": 0.5,
+        "collectibleGlowOpacity": 0.09
+      },
+      "audio": {
+        "enabled": true,
+        "volumes": {
+          "jump": 0.45,
+          "landing": 0.45,
+          "shoot": 0.45,
+          "impact": 0.45,
+          "hurt": 0.45,
+          "run": 0.93
+        }
+      },
+      "animations": {
+        "operator-idle": {
+          "role": "idle",
+          "sourceSize": {
+            "width": 512,
+            "height": 512
+          },
+          "displaySize": {
+            "width": 384,
+            "height": 384
+          },
+          "scale": {
+            "x": 0.75,
+            "y": 0.75
+          },
+          "lockAspectRatio": true,
+          "origin": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "offset": {
+            "x": 0,
+            "y": 0
+          },
+          "playback": {
+            "start": 0,
+            "end": 11,
+            "frameRate": 30,
+            "repeat": -1
+          },
+          "bounds": {
+            "visual": {
+              "x": 180,
+              "y": 156,
+              "w": 176,
+              "h": 176
+            },
+            "collision": {
+              "x": 180,
+              "y": 156,
+              "w": 176,
+              "h": 176
+            },
+            "attack": {
+              "x": 180,
+              "y": 156,
+              "w": 176,
+              "h": 176
+            }
+          }
+        },
+        "operator-run": {
+          "role": "run",
+          "sourceSize": {
+            "width": 384,
+            "height": 384
+          },
+          "displaySize": {
+            "width": 384,
+            "height": 384
+          },
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "lockAspectRatio": true,
+          "origin": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "offset": {
+            "x": 0,
+            "y": 0
+          },
+          "playback": {
+            "start": 0,
+            "end": 15,
+            "frameRate": 30,
+            "repeat": -1
+          },
+          "bounds": {
+            "visual": {
+              "x": 128,
+              "y": 116,
+              "w": 136,
+              "h": 148
+            },
+            "collision": {
+              "x": 128,
+              "y": 116,
+              "w": 136,
+              "h": 148
+            },
+            "attack": {
+              "x": 128,
+              "y": 116,
+              "w": 136,
+              "h": 148
+            }
+          }
+        },
+        "operator-jump": {
+          "role": "jump",
+          "sourceSize": {
+            "width": 384,
+            "height": 384
+          },
+          "displaySize": {
+            "width": 384,
+            "height": 384
+          },
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "lockAspectRatio": true,
+          "origin": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "offset": {
+            "x": 0,
+            "y": 0
+          },
+          "playback": {
+            "start": 0,
+            "end": 11,
+            "frameRate": 30,
+            "repeat": 0
+          },
+          "bounds": {
+            "visual": {
+              "x": 128,
+              "y": 48,
+              "w": 136,
+              "h": 248
+            },
+            "collision": {
+              "x": 128,
+              "y": 48,
+              "w": 136,
+              "h": 248
+            },
+            "attack": {
+              "x": 128,
+              "y": 48,
+              "w": 136,
+              "h": 248
+            }
+          }
+        },
+        "operator-shot": {
+          "role": "attack",
+          "sourceSize": {
+            "width": 384,
+            "height": 384
+          },
+          "displaySize": {
+            "width": 384,
+            "height": 384
+          },
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "lockAspectRatio": true,
+          "origin": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "offset": {
+            "x": 28,
+            "y": 0
+          },
+          "frameOffsets": {
+            "0": {
+              "x": 0,
+              "y": 0
+            },
+            "1": {
+              "x": -1,
+              "y": 0
+            },
+            "2": {
+              "x": 0,
+              "y": 0
+            },
+            "3": {
+              "x": 0,
+              "y": 0
+            },
+            "4": {
+              "x": 3,
+              "y": 0
+            },
+            "5": {
+              "x": 4,
+              "y": 0
+            },
+            "6": {
+              "x": 4,
+              "y": 0
+            },
+            "7": {
+              "x": 5,
+              "y": 0
+            },
+            "8": {
+              "x": 6,
+              "y": 0
+            },
+            "9": {
+              "x": 7,
+              "y": 0
+            }
+          },
+          "playback": {
+            "start": 0,
+            "end": 9,
+            "frameRate": 30,
+            "repeat": 0
+          },
+          "bounds": {
+            "visual": {
+              "x": 132,
+              "y": 120,
+              "w": 204,
+              "h": 128
+            },
+            "collision": {
+              "x": 132,
+              "y": 120,
+              "w": 204,
+              "h": 128
+            },
+            "attack": {
+              "x": 268,
+              "y": 144,
+              "w": 68,
+              "h": 48
+            }
+          }
+        },
+        "operator-hurt": {
+          "role": "hurt",
+          "sourceSize": {
+            "width": 384,
+            "height": 384
+          },
+          "displaySize": {
+            "width": 384,
+            "height": 384
+          },
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "lockAspectRatio": true,
+          "origin": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "offset": {
+            "x": 0,
+            "y": 0
+          },
+          "playback": {
+            "start": 0,
+            "end": 11,
+            "frameRate": 30,
+            "repeat": 0
+          },
+          "bounds": {
+            "visual": {
+              "x": 136,
+              "y": 116,
+              "w": 144,
+              "h": 132
+            },
+            "collision": {
+              "x": 136,
+              "y": 116,
+              "w": 144,
+              "h": 132
+            },
+            "attack": {
+              "x": 136,
+              "y": 116,
+              "w": 144,
+              "h": 132
+            }
+          }
+        },
+        "operator-bullet": {
+          "role": "projectile",
+          "sourceSize": {
+            "width": 512,
+            "height": 512
+          },
+          "displaySize": {
+            "width": 220,
+            "height": 220
+          },
+          "scale": {
+            "x": 0.4296875,
+            "y": 0.4296875
+          },
+          "lockAspectRatio": true,
+          "origin": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "offset": {
+            "x": 0,
+            "y": 0
+          },
+          "playback": {
+            "start": 0,
+            "end": 5,
+            "frameRate": 30,
+            "repeat": -1
+          },
+          "bounds": {
+            "visual": {
+              "x": 188,
+              "y": 232,
+              "w": 139,
+              "h": 48
+            },
+            "collision": {
+              "x": 188,
+              "y": 232,
+              "w": 139,
+              "h": 48
+            },
+            "attack": {
+              "x": 188,
+              "y": 232,
+              "w": 139,
+              "h": 48
+            }
+          }
+        },
+        "operator-bullet-impact": {
+          "role": "impact",
+          "sourceSize": {
+            "width": 256,
+            "height": 219
+          },
+          "displaySize": {
+            "width": 256,
+            "height": 219
+          },
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "lockAspectRatio": true,
+          "origin": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "offset": {
+            "x": 0,
+            "y": 0
+          },
+          "playback": {
+            "start": 0,
+            "end": 5,
+            "frameRate": 30,
+            "repeat": 0
+          },
+          "bounds": {
+            "visual": {
+              "x": 8,
+              "y": 13,
+              "w": 236,
+              "h": 164
+            },
+            "collision": {
+              "x": 8,
+              "y": 13,
+              "w": 236,
+              "h": 164
+            },
+            "attack": {
+              "x": 8,
+              "y": 13,
+              "w": 236,
+              "h": 164
+            }
+          }
+        }
+      }
+    },
+    "spider": {
+      "facing": "left",
+      "stage": {
+        "groundY": 100
+      },
+      "motion": {
+        "runSpeed": 180,
+        "jumpHeight": 0
+      },
+      "projectile": {
+        "assetKey": "",
+        "impactAssetKey": "",
+        "speed": 0,
+        "edgePadding": 0,
+        "spawnOffset": {
+          "x": 0,
+          "y": 0
+        },
+        "emitSourceCell": 0
+      },
+      "testLevel": {
+        "scale": 0.4
+      },
+      "animations": {
+        "spider-idle": {
+          "role": "idle",
+          "sourceSize": {
+            "width": 960,
+            "height": 960
+          },
+          "displaySize": {
+            "width": 384,
+            "height": 384
+          },
+          "scale": {
+            "x": 0.4,
+            "y": 0.4
+          },
+          "lockAspectRatio": true,
+          "origin": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "offset": {
+            "x": 0,
+            "y": 0
+          },
+          "playback": {
+            "start": 0,
+            "end": 11,
+            "frameRate": 30,
+            "repeat": -1
+          },
+          "bounds": {
+            "visual": {
+              "x": 264,
+              "y": 299,
+              "w": 456,
+              "h": 323
+            },
+            "collision": {
+              "x": 264,
+              "y": 299,
+              "w": 456,
+              "h": 323
+            },
+            "attack": {
+              "x": 264,
+              "y": 299,
+              "w": 456,
+              "h": 323
+            }
+          }
+        },
+        "spider-run": {
+          "role": "run",
+          "sourceSize": {
+            "width": 960,
+            "height": 960
+          },
+          "displaySize": {
+            "width": 384,
+            "height": 384
+          },
+          "scale": {
+            "x": 0.4,
+            "y": 0.4
+          },
+          "lockAspectRatio": true,
+          "origin": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "offset": {
+            "x": 0,
+            "y": 0
+          },
+          "playback": {
+            "start": 0,
+            "end": 15,
+            "frameRate": 30,
+            "repeat": -1
+          },
+          "bounds": {
+            "visual": {
+              "x": 220,
+              "y": 278,
+              "w": 535,
+              "h": 439
+            },
+            "collision": {
+              "x": 220,
+              "y": 278,
+              "w": 535,
+              "h": 439
+            },
+            "attack": {
+              "x": 220,
+              "y": 278,
+              "w": 535,
+              "h": 439
+            }
+          }
+        },
+        "spider-attack": {
+          "role": "attack",
+          "sourceSize": {
+            "width": 960,
+            "height": 960
+          },
+          "displaySize": {
+            "width": 384,
+            "height": 384
+          },
+          "scale": {
+            "x": 0.4,
+            "y": 0.4
+          },
+          "lockAspectRatio": true,
+          "origin": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "offset": {
+            "x": 0,
+            "y": 0
+          },
+          "playback": {
+            "start": 0,
+            "end": 11,
+            "frameRate": 30,
+            "repeat": -1
+          },
+          "bounds": {
+            "visual": {
+              "x": 120,
+              "y": 218,
+              "w": 607,
+              "h": 427
+            },
+            "collision": {
+              "x": 120,
+              "y": 218,
+              "w": 607,
+              "h": 427
+            },
+            "attack": {
+              "x": 120,
+              "y": 218,
+              "w": 607,
+              "h": 427
+            }
+          }
+        },
+        "spider-hurt": {
+          "role": "hurt",
+          "sourceSize": {
+            "width": 960,
+            "height": 960
+          },
+          "displaySize": {
+            "width": 384,
+            "height": 384
+          },
+          "scale": {
+            "x": 0.4,
+            "y": 0.4
+          },
+          "lockAspectRatio": true,
+          "origin": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "offset": {
+            "x": 0,
+            "y": 0
+          },
+          "playback": {
+            "start": 0,
+            "end": 11,
+            "frameRate": 30,
+            "repeat": -1
+          },
+          "bounds": {
+            "visual": {
+              "x": 203,
+              "y": 255,
+              "w": 543,
+              "h": 378
+            },
+            "collision": {
+              "x": 203,
+              "y": 255,
+              "w": 543,
+              "h": 378
+            },
+            "attack": {
+              "x": 203,
+              "y": 255,
+              "w": 543,
+              "h": 378
+            }
+          }
+        },
+        "spider-dead": {
+          "role": "dead",
+          "sourceSize": {
+            "width": 960,
+            "height": 960
+          },
+          "displaySize": {
+            "width": 384,
+            "height": 384
+          },
+          "scale": {
+            "x": 0.4,
+            "y": 0.4
+          },
+          "lockAspectRatio": true,
+          "origin": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "offset": {
+            "x": 0,
+            "y": 0
+          },
+          "playback": {
+            "start": 0,
+            "end": 15,
+            "frameRate": 30,
+            "repeat": -1
+          },
+          "bounds": {
+            "visual": {
+              "x": 204,
+              "y": 300,
+              "w": 568,
+              "h": 340
+            },
+            "collision": {
+              "x": 204,
+              "y": 300,
+              "w": 568,
+              "h": 340
+            },
+            "attack": {
+              "x": 204,
+              "y": 300,
+              "w": 568,
+              "h": 340
+            }
+          }
+        }
+      }
+    },
+    "dust": {
+      "facing": "right",
+      "stage": {
+        "groundY": 100
+      },
+      "motion": {
+        "runSpeed": 180,
+        "jumpHeight": 0
+      },
+      "projectile": {
+        "assetKey": "",
+        "impactAssetKey": "",
+        "speed": 0,
+        "edgePadding": 0,
+        "spawnOffset": {
+          "x": 0,
+          "y": 0
+        },
+        "emitSourceCell": 0
+      },
+      "testLevel": {
+        "scale": 0.5
+      },
+      "animations": {
+        "dust-idle": {
+          "role": "idle",
+          "sourceSize": {
+            "width": 512,
+            "height": 512
+          },
+          "displaySize": {
+            "width": 288,
+            "height": 288
+          },
+          "scale": {
+            "x": 0.5625,
+            "y": 0.5625
+          },
+          "lockAspectRatio": true,
+          "origin": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "offset": {
+            "x": 0,
+            "y": 0
+          },
+          "playback": {
+            "start": 0,
+            "end": 13,
+            "frameRate": 30,
+            "repeat": -1
+          },
+          "bounds": {
+            "visual": {
+              "x": 129,
+              "y": 124,
+              "w": 228,
+              "h": 241
+            },
+            "collision": {
+              "x": 129,
+              "y": 124,
+              "w": 228,
+              "h": 241
+            },
+            "attack": {
+              "x": 129,
+              "y": 124,
+              "w": 228,
+              "h": 241
+            }
+          }
+        },
+        "dust-run": {
+          "role": "run",
+          "sourceSize": {
+            "width": 960,
+            "height": 960
+          },
+          "displaySize": {
+            "width": 288,
+            "height": 288
+          },
+          "scale": {
+            "x": 0.3,
+            "y": 0.3
+          },
+          "lockAspectRatio": true,
+          "origin": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "offset": {
+            "x": 0,
+            "y": 0
+          },
+          "playback": {
+            "start": 0,
+            "end": 11,
+            "frameRate": 30,
+            "repeat": -1
+          },
+          "bounds": {
+            "visual": {
+              "x": 264,
+              "y": 274,
+              "w": 417,
+              "h": 437
+            },
+            "collision": {
+              "x": 264,
+              "y": 274,
+              "w": 417,
+              "h": 437
+            },
+            "attack": {
+              "x": 264,
+              "y": 274,
+              "w": 417,
+              "h": 437
+            }
+          }
+        },
+        "dust-attack": {
+          "role": "attack",
+          "sourceSize": {
+            "width": 960,
+            "height": 960
+          },
+          "displaySize": {
+            "width": 288,
+            "height": 288
+          },
+          "scale": {
+            "x": 0.3,
+            "y": 0.3
+          },
+          "lockAspectRatio": true,
+          "origin": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "offset": {
+            "x": 0,
+            "y": 0
+          },
+          "playback": {
+            "start": 0,
+            "end": 15,
+            "frameRate": 30,
+            "repeat": -1
+          },
+          "bounds": {
+            "visual": {
+              "x": 100,
+              "y": 131,
+              "w": 770,
+              "h": 611
+            },
+            "collision": {
+              "x": 100,
+              "y": 131,
+              "w": 770,
+              "h": 611
+            },
+            "attack": {
+              "x": 100,
+              "y": 131,
+              "w": 770,
+              "h": 611
+            }
+          }
+        },
+        "dust-hurt": {
+          "role": "hurt",
+          "sourceSize": {
+            "width": 960,
+            "height": 960
+          },
+          "displaySize": {
+            "width": 288,
+            "height": 288
+          },
+          "scale": {
+            "x": 0.3,
+            "y": 0.3
+          },
+          "lockAspectRatio": true,
+          "origin": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "offset": {
+            "x": 0,
+            "y": 0
+          },
+          "playback": {
+            "start": 0,
+            "end": 11,
+            "frameRate": 30,
+            "repeat": -1
+          },
+          "bounds": {
+            "visual": {
+              "x": 264,
+              "y": 268,
+              "w": 432,
+              "h": 424
+            },
+            "collision": {
+              "x": 264,
+              "y": 268,
+              "w": 432,
+              "h": 424
+            },
+            "attack": {
+              "x": 264,
+              "y": 268,
+              "w": 432,
+              "h": 424
+            }
+          }
+        },
+        "dust-dead": {
+          "role": "dead",
+          "sourceSize": {
+            "width": 960,
+            "height": 960
+          },
+          "displaySize": {
+            "width": 288,
+            "height": 288
+          },
+          "scale": {
+            "x": 0.3,
+            "y": 0.3
+          },
+          "lockAspectRatio": true,
+          "origin": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "offset": {
+            "x": 0,
+            "y": 0
+          },
+          "frameOffsets": {
+            "14": {
+              "x": 0,
+              "y": 28.5
+            }
+          },
+          "playback": {
+            "start": 0,
+            "end": 14,
+            "frameRate": 30,
+            "repeat": -1
+          },
+          "bounds": {
+            "visual": {
+              "x": 179,
+              "y": 11,
+              "w": 590,
+              "h": 676
+            },
+            "collision": {
+              "x": 179,
+              "y": 11,
+              "w": 590,
+              "h": 676
+            },
+            "attack": {
+              "x": 179,
+              "y": 11,
+              "w": 590,
+              "h": 676
+            }
+          }
+        }
+      }
+    },
+    "wafer": {
+      "facing": "right",
+      "stage": {
+        "groundY": 100
+      },
+      "motion": {
+        "runSpeed": 180,
+        "jumpHeight": 150
+      },
+      "projectile": {
+        "assetKey": "",
+        "impactAssetKey": "",
+        "speed": 0,
+        "edgePadding": 0,
+        "spawnOffset": {
+          "x": 0,
+          "y": 0
+        },
+        "emitSourceCell": 0
+      },
+      "testLevel": {
+        "scale": 0.4
+      },
+      "audio": {
+        "enabled": true,
+        "effects": {
+          "attack": "wafer-attack-sfx",
+          "hurt": "wafer-hurt-sfx",
+          "walk": "wafer-walk-sfx"
+        },
+        "volumes": { "attack": 0.42, "hurt": 0.5, "walk": 1 }
+      },
+      "animations": {
+        "wafer-idle": {
+          "role": "idle",
+          "sourceSize": {
+            "width": 960,
+            "height": 960
+          },
+          "displaySize": {
+            "width": 384,
+            "height": 384
+          },
+          "scale": {
+            "x": 0.4,
+            "y": 0.4
+          },
+          "lockAspectRatio": true,
+          "origin": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "offset": {
+            "x": 0,
+            "y": 0
+          },
+          "playback": {
+            "start": 0,
+            "end": 13,
+            "frameRate": 30,
+            "repeat": -1
+          },
+          "bounds": {
+            "visual": {
+              "x": 293,
+              "y": 327,
+              "w": 383,
+              "h": 318
+            },
+            "collision": {
+              "x": 293,
+              "y": 327,
+              "w": 383,
+              "h": 318
+            },
+            "attack": {
+              "x": 293,
+              "y": 327,
+              "w": 383,
+              "h": 318
+            }
+          }
+        },
+        "wafer-run": {
+          "role": "run",
+          "sourceSize": {
+            "width": 960,
+            "height": 960
+          },
+          "displaySize": {
+            "width": 384,
+            "height": 384
+          },
+          "scale": {
+            "x": 0.4,
+            "y": 0.4
+          },
+          "lockAspectRatio": true,
+          "origin": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "offset": {
+            "x": 0,
+            "y": 0
+          },
+          "playback": {
+            "start": 0,
+            "end": 17,
+            "frameRate": 30,
+            "repeat": -1
+          },
+          "bounds": {
+            "visual": {
+              "x": 270,
+              "y": 292,
+              "w": 419,
+              "h": 356
+            },
+            "collision": {
+              "x": 270,
+              "y": 292,
+              "w": 419,
+              "h": 356
+            },
+            "attack": {
+              "x": 270,
+              "y": 292,
+              "w": 419,
+              "h": 356
+            }
+          }
+        },
+        "wafer-jump": {
+          "role": "jump",
+          "sourceSize": {
+            "width": 960,
+            "height": 960
+          },
+          "displaySize": {
+            "width": 384,
+            "height": 384
+          },
+          "scale": {
+            "x": 0.4,
+            "y": 0.4
+          },
+          "lockAspectRatio": true,
+          "origin": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "offset": {
+            "x": 0,
+            "y": 0
+          },
+          "playback": {
+            "start": 0,
+            "end": 11,
+            "frameRate": 30,
+            "repeat": 0
+          },
+          "bounds": {
+            "visual": {
+              "x": 278,
+              "y": 378,
+              "w": 403,
+              "h": 339
+            },
+            "collision": {
+              "x": 278,
+              "y": 378,
+              "w": 403,
+              "h": 339
+            },
+            "attack": {
+              "x": 278,
+              "y": 378,
+              "w": 403,
+              "h": 339
+            }
+          }
+        },
+        "wafer-attack": {
+          "role": "attack",
+          "sourceSize": {
+            "width": 960,
+            "height": 960
+          },
+          "displaySize": {
+            "width": 384,
+            "height": 384
+          },
+          "scale": {
+            "x": 0.4,
+            "y": 0.4
+          },
+          "lockAspectRatio": true,
+          "origin": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "offset": {
+            "x": 0,
+            "y": 0
+          },
+          "playback": {
+            "start": 0,
+            "end": 15,
+            "frameRate": 30,
+            "repeat": 0
+          },
+          "bounds": {
+            "visual": {
+              "x": 269,
+              "y": 314,
+              "w": 427,
+              "h": 331
+            },
+            "collision": {
+              "x": 269,
+              "y": 314,
+              "w": 427,
+              "h": 331
+            },
+            "attack": {
+              "x": 269,
+              "y": 314,
+              "w": 427,
+              "h": 331
+            }
+          }
+        },
+        "wafer-hurt": {
+          "role": "hurt",
+          "sourceSize": {
+            "width": 960,
+            "height": 960
+          },
+          "displaySize": {
+            "width": 384,
+            "height": 384
+          },
+          "scale": {
+            "x": 0.4,
+            "y": 0.4
+          },
+          "lockAspectRatio": true,
+          "origin": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "offset": {
+            "x": 0,
+            "y": 0
+          },
+          "playback": {
+            "start": 0,
+            "end": 15,
+            "frameRate": 30,
+            "repeat": 0
+          },
+          "bounds": {
+            "visual": {
+              "x": 279,
+              "y": 298,
+              "w": 414,
+              "h": 347
+            },
+            "collision": {
+              "x": 279,
+              "y": 298,
+              "w": 414,
+              "h": 347
+            },
+            "attack": {
+              "x": 279,
+              "y": 298,
+              "w": 414,
+              "h": 347
+            }
+          }
+        },
+        "wafer-dead": {
+          "role": "dead",
+          "sourceSize": {
+            "width": 960,
+            "height": 960
+          },
+          "displaySize": {
+            "width": 384,
+            "height": 384
+          },
+          "scale": {
+            "x": 0.4,
+            "y": 0.4
+          },
+          "lockAspectRatio": true,
+          "origin": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "offset": {
+            "x": 0,
+            "y": 0
+          },
+          "playback": {
+            "start": 0,
+            "end": 15,
+            "frameRate": 30,
+            "repeat": 0
+          },
+          "bounds": {
+            "visual": {
+              "x": 232,
+              "y": 325,
+              "w": 516,
+              "h": 373
+            },
+            "collision": {
+              "x": 232,
+              "y": 325,
+              "w": 516,
+              "h": 373
+            },
+            "attack": {
+              "x": 232,
+              "y": 325,
+              "w": 516,
+              "h": 373
+            }
+          }
+        }
+      }
+    },
+    "robot": {
+      "facing": "right",
+      "stage": {
+        "groundY": 100
+      },
+      "motion": {
+        "runSpeed": 180,
+        "jumpHeight": 0
+      },
+      "projectile": {
+        "assetKey": "",
+        "impactAssetKey": "",
+        "speed": 0,
+        "edgePadding": 0,
+        "spawnOffset": {
+          "x": 0,
+          "y": 0
+        },
+        "emitSourceCell": 0
+      },
+      "testLevel": {
+        "scale": 0.5
+      },
+      "audio": {
+        "enabled": true,
+        "effects": {
+          "attack": "spider-attack-sfx",
+          "hurt": "operator-laser-impact"
+        },
+        "volumes": { "attack": 0.32, "hurt": 0.38 }
+      },
+      "animations": {
+        "robot-idle": {
+          "role": "idle",
+          "sourceSize": {
+            "width": 960,
+            "height": 960
+          },
+          "displaySize": {
+            "width": 288,
+            "height": 288
+          },
+          "scale": {
+            "x": 0.3,
+            "y": 0.3
+          },
+          "lockAspectRatio": true,
+          "origin": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "offset": {
+            "x": 0,
+            "y": 0
+          },
+          "playback": {
+            "start": 0,
+            "end": 13,
+            "frameRate": 30,
+            "repeat": -1
+          },
+          "bounds": {
+            "visual": {
+              "x": 183,
+              "y": 71,
+              "w": 666,
+              "h": 728
+            },
+            "collision": {
+              "x": 183,
+              "y": 71,
+              "w": 666,
+              "h": 728
+            },
+            "attack": {
+              "x": 183,
+              "y": 71,
+              "w": 666,
+              "h": 728
+            }
+          }
+        },
+        "robot-run": {
+          "role": "run",
+          "sourceSize": {
+            "width": 960,
+            "height": 960
+          },
+          "displaySize": {
+            "width": 288,
+            "height": 288
+          },
+          "scale": {
+            "x": 0.3,
+            "y": 0.3
+          },
+          "lockAspectRatio": true,
+          "origin": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "offset": {
+            "x": 0,
+            "y": 0
+          },
+          "playback": {
+            "start": 0,
+            "end": 12,
+            "frameRate": 30,
+            "repeat": -1
+          },
+          "bounds": {
+            "visual": {
+              "x": 95,
+              "y": 60,
+              "w": 778,
+              "h": 759
+            },
+            "collision": {
+              "x": 95,
+              "y": 60,
+              "w": 778,
+              "h": 759
+            },
+            "attack": {
+              "x": 95,
+              "y": 60,
+              "w": 778,
+              "h": 759
+            }
+          }
+        },
+        "robot-attack": {
+          "role": "attack",
+          "sourceSize": {
+            "width": 960,
+            "height": 960
+          },
+          "displaySize": {
+            "width": 288,
+            "height": 288
+          },
+          "scale": {
+            "x": 0.3,
+            "y": 0.3
+          },
+          "lockAspectRatio": true,
+          "origin": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "offset": {
+            "x": 0,
+            "y": 0
+          },
+          "playback": {
+            "start": 0,
+            "end": 13,
+            "frameRate": 30,
+            "repeat": 0
+          },
+          "bounds": {
+            "visual": {
+              "x": 125,
+              "y": 97,
+              "w": 835,
+              "h": 721
+            },
+            "collision": {
+              "x": 125,
+              "y": 97,
+              "w": 835,
+              "h": 721
+            },
+            "attack": {
+              "x": 125,
+              "y": 97,
+              "w": 835,
+              "h": 721
+            }
+          }
+        },
+        "robot-hurt": {
+          "role": "hurt",
+          "sourceSize": {
+            "width": 960,
+            "height": 960
+          },
+          "displaySize": {
+            "width": 288,
+            "height": 288
+          },
+          "scale": {
+            "x": 0.3,
+            "y": 0.3
+          },
+          "lockAspectRatio": true,
+          "origin": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "offset": {
+            "x": 0,
+            "y": 0
+          },
+          "playback": {
+            "start": 0,
+            "end": 13,
+            "frameRate": 30,
+            "repeat": 0
+          },
+          "bounds": {
+            "visual": {
+              "x": 74,
+              "y": 80,
+              "w": 817,
+              "h": 744
+            },
+            "collision": {
+              "x": 74,
+              "y": 80,
+              "w": 817,
+              "h": 744
+            },
+            "attack": {
+              "x": 74,
+              "y": 80,
+              "w": 817,
+              "h": 744
+            }
+          }
+        },
+        "robot-dead": {
+          "role": "dead",
+          "sourceSize": {
+            "width": 960,
+            "height": 960
+          },
+          "displaySize": {
+            "width": 288,
+            "height": 288
+          },
+          "scale": {
+            "x": 0.3,
+            "y": 0.3
+          },
+          "lockAspectRatio": true,
+          "origin": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "offset": {
+            "x": 0,
+            "y": 0
+          },
+          "playback": {
+            "start": 0,
+            "end": 15,
+            "frameRate": 30,
+            "repeat": 0
+          },
+          "bounds": {
+            "visual": {
+              "x": 0,
+              "y": 22,
+              "w": 951,
+              "h": 849
+            },
+            "collision": {
+              "x": 0,
+              "y": 22,
+              "w": 951,
+              "h": 849
+            },
+            "attack": {
+              "x": 0,
+              "y": 22,
+              "w": 951,
+              "h": 849
+            }
+          }
+        }
+      }
+    }
+  }
+}

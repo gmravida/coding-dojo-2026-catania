@@ -1,0 +1,70 @@
+{
+  "generator": "Sorceress Parallax Background Generator",
+  "exportedAt": "2026-09-09T11:01:30.736Z",
+  "scene": {
+    "aspectRatio": "21:9",
+    "resolution": "1K",
+    "layerCount": 4,
+    "compositeOrder": "Draw back-to-front: background, then midground, then ground, then the player character, then foreground (occluder).",
+    "units": {
+      "scale": "multiplier, 1 = native size (range 0.3–3)",
+      "verticalOffsetPercent": "percent of stage height, positive = down (range -100..100)",
+      "restoreGreenPercent": "amount of original green re-blended after key-out (0 = fully despilled)",
+      "suggestedParallaxFactor": "relative horizontal scroll speed vs camera; foreground ≈ 1.35 (fastest), ground = 1.0"
+    }
+  },
+  "layers": [
+    {
+      "slot": 1,
+      "role": "ground",
+      "file": "layer-1-ground.png",
+      "transparentPng": true,
+      "pixelArt": false,
+      "scale": 1,
+      "verticalOffsetPercent": 10,
+      "restoreGreenPercent": 0,
+      "hiddenInPreview": false,
+      "suggestedParallaxFactor": 1,
+      "prompt": "pixel art, ground-level detail of a metallic factory floor with riveted panels and small pipes at the edge, low and narrow along the bottom third, tiny tools as props, empty background above, cohesive color palette, side-scrolling parallax foreground strip, set against a solid uniform pure chroma green screen background (#00b140), flat even lighting, crisp clean edges, no green spill on the subject, background a single flat green color only with nothing else, every prop fully inside the frame with a clear empty green margin on the left and right borders, soft organic silhouettes only, nothing cropped or cut off by the left or right edge, no hard vertical cut lines. Seamlessly repeating left and right edges with no hard vertical seams — left and right borders empty or perfectly matching for a clean horizontal side-scrolling loop"
+    },
+    {
+      "slot": 2,
+      "role": "midground",
+      "file": "layer-2-midground.png",
+      "transparentPng": true,
+      "pixelArt": false,
+      "scale": 1,
+      "verticalOffsetPercent": 7,
+      "restoreGreenPercent": 0,
+      "hiddenInPreview": false,
+      "suggestedParallaxFactor": 0.6,
+      "prompt": "pixel art, midground with vertical industrial elements: blue-glow terminal boxes, robotic arms bent at angles, metal beams and pipes, spaced to allow gaps, dusk-blue ambiance, consistent across frame, set against a solid uniform pure chroma green screen background (#00b140), flat even lighting, crisp clean edges, no green spill on the subject, background a single flat green color only with nothing else, every prop fully inside the frame with a clear empty green margin on the left and right borders, soft organic silhouettes only, nothing cropped or cut off by the left or right edge, no hard vertical cut lines. Seamlessly repeating left and right edges with no hard vertical seams — left and right borders empty or perfectly matching for a clean horizontal side-scrolling loop"
+    },
+    {
+      "slot": 3,
+      "role": "background",
+      "file": "layer-3-background.png",
+      "transparentPng": false,
+      "pixelArt": false,
+      "scale": 1,
+      "verticalOffsetPercent": -13,
+      "restoreGreenPercent": 0,
+      "hiddenInPreview": false,
+      "suggestedParallaxFactor": 0.3,
+      "prompt": "pixel art, distant skyline of a luminous blue factory, vast sky with subtle gradient, distant scaffold silhouettes, atmospheric depth, full-frame backdrop, same color temperature as levels 1 and 2. Seamlessly repeating left and right edges with no hard vertical seams — left and right borders empty or perfectly matching for a clean horizontal side-scrolling loop"
+    },
+    {
+      "slot": 4,
+      "role": "foreground",
+      "file": "layer-4-foreground.png",
+      "transparentPng": true,
+      "pixelArt": false,
+      "scale": 1.2,
+      "verticalOffsetPercent": 23,
+      "restoreGreenPercent": 0,
+      "hiddenInPreview": false,
+      "suggestedParallaxFactor": 1.35,
+      "prompt": "pixel art, parallax foreground strip: many tiny near-ground accents lined up along a shared horizontal plane, 5–8 small blue-lit knobs, cables, tiny valves, evenly spaced side by side, near bottom third, empty above, seamless tiling, no large objects, soft organic silhouettes, set against a solid uniform pure chroma green screen background (#00b140), flat even lighting, crisp clean edges, no green spill on the subject, background a single flat green color only with nothing else, every prop fully inside the frame with a clear empty green margin on the left and right borders, soft organic silhouettes only, nothing cropped or cut off by the left or right edge, no hard vertical cut lines, about 5–8 very tiny accents all sitting on the same shared horizontal ground plane near the bottom third of the frame (like a parallax foreground strip the player runs past), none stacked above each other or floating at random heights, each only 8–12% of the frame height, generous empty green margin on left right and top so nothing is cut by any border. Seamlessly repeating left and right edges with no hard vertical seams — left and right borders empty or perfectly matching for a clean horizontal side-scrolling loop"
+    }
+  ]
+}

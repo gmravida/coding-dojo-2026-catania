@@ -1,0 +1,933 @@
+{
+  "sprites": [
+    {
+      "key": "operator-idle",
+      "character": "operator",
+      "role": "idle",
+      "facing": "right",
+      "url": "runner/operator-idle.png",
+      "frameConfig": {
+        "frameWidth": 160,
+        "frameHeight": 160,
+        "endFrame": 11
+      },
+      "animation": {
+        "key": "operator-idle",
+        "start": 0,
+        "end": 11,
+        "frameRate": 30,
+        "repeat": -1
+      },
+      "bounds": {
+        "x": 30,
+        "y": 60,
+        "w": 84,
+        "h": 84
+      }
+    },
+    {
+      "key": "operator-run",
+      "character": "operator",
+      "role": "run",
+      "facing": "right",
+      "url": "runner/operator-run.png",
+      "frameConfig": {
+        "frameWidth": 160,
+        "frameHeight": 160,
+        "endFrame": 15
+      },
+      "animation": {
+        "key": "operator-run",
+        "start": 0,
+        "end": 15,
+        "frameRate": 30,
+        "repeat": -1
+      },
+      "bounds": {
+        "x": 28,
+        "y": 55,
+        "w": 86,
+        "h": 89
+      }
+    },
+    {
+      "key": "operator-jump",
+      "character": "operator",
+      "role": "jump",
+      "facing": "right",
+      "url": "runner/operator-jump.png",
+      "frameConfig": {
+        "frameWidth": 160,
+        "frameHeight": 160,
+        "endFrame": 11
+      },
+      "animation": {
+        "key": "operator-jump",
+        "start": 0,
+        "end": 11,
+        "frameRate": 30,
+        "repeat": 0
+      },
+      "bounds": {
+        "x": 27,
+        "y": 53,
+        "w": 86,
+        "h": 91
+      }
+    },
+    {
+      "key": "operator-shot",
+      "character": "operator",
+      "role": "attack",
+      "facing": "right",
+      "url": "runner/operator-shot.png",
+      "frameConfig": {
+        "frameWidth": 160,
+        "frameHeight": 160,
+        "endFrame": 9
+      },
+      "animation": {
+        "key": "operator-shot",
+        "start": 0,
+        "end": 9,
+        "frameRate": 30,
+        "repeat": 0
+      },
+      "bounds": {
+        "x": 28,
+        "y": 63,
+        "w": 130,
+        "h": 81
+      }
+    },
+    {
+      "key": "operator-hurt",
+      "character": "operator",
+      "role": "hurt",
+      "facing": "right",
+      "url": "runner/operator-hurt.png",
+      "frameConfig": {
+        "frameWidth": 160,
+        "frameHeight": 160,
+        "endFrame": 11
+      },
+      "animation": {
+        "key": "operator-hurt",
+        "start": 0,
+        "end": 11,
+        "frameRate": 30,
+        "repeat": 0
+      },
+      "bounds": {
+        "x": 30,
+        "y": 60,
+        "w": 92,
+        "h": 84
+      }
+    },
+    {
+      "key": "operator-bullet",
+      "character": "operator",
+      "role": "projectile",
+      "facing": "right",
+      "url": "runner/operator-bullet.png",
+      "frameConfig": {
+        "frameWidth": 160,
+        "frameHeight": 160,
+        "endFrame": 5
+      },
+      "animation": {
+        "key": "operator-bullet",
+        "start": 0,
+        "end": 5,
+        "frameRate": 30,
+        "repeat": -1
+      },
+      "bounds": {
+        "x": 59,
+        "y": 129,
+        "w": 42,
+        "h": 15
+      }
+    },
+    {
+      "key": "operator-bullet-impact",
+      "character": "operator",
+      "role": "impact",
+      "facing": "right",
+      "url": "runner/operator-bullet-impact.png",
+      "frameConfig": {
+        "frameWidth": 160,
+        "frameHeight": 160,
+        "endFrame": 5
+      },
+      "animation": {
+        "key": "operator-bullet-impact",
+        "start": 0,
+        "end": 5,
+        "frameRate": 30,
+        "repeat": 0
+      },
+      "bounds": {
+        "x": 12,
+        "y": 50,
+        "w": 135,
+        "h": 94
+      }
+    },
+    {
+      "key": "spider-idle",
+      "character": "spider",
+      "role": "idle",
+      "facing": "left",
+      "url": "runner/spider-idle.png",
+      "frameConfig": {
+        "frameWidth": 240,
+        "frameHeight": 240,
+        "endFrame": 11
+      },
+      "animation": {
+        "key": "spider-idle",
+        "start": 0,
+        "end": 11,
+        "frameRate": 30,
+        "repeat": -1
+      },
+      "bounds": {
+        "x": 53,
+        "y": 120,
+        "w": 134,
+        "h": 96
+      }
+    },
+    {
+      "key": "spider-run",
+      "character": "spider",
+      "role": "run",
+      "facing": "left",
+      "url": "runner/spider-run.png",
+      "frameConfig": {
+        "frameWidth": 240,
+        "frameHeight": 240,
+        "endFrame": 15
+      },
+      "animation": {
+        "key": "spider-run",
+        "start": 0,
+        "end": 15,
+        "frameRate": 30,
+        "repeat": -1
+      },
+      "bounds": {
+        "x": 46,
+        "y": 98,
+        "w": 147,
+        "h": 118
+      }
+    },
+    {
+      "key": "spider-attack",
+      "character": "spider",
+      "role": "attack",
+      "facing": "left",
+      "url": "runner/spider-attack.png",
+      "frameConfig": {
+        "frameWidth": 240,
+        "frameHeight": 240,
+        "endFrame": 11
+      },
+      "animation": {
+        "key": "spider-attack",
+        "start": 0,
+        "end": 11,
+        "frameRate": 30,
+        "repeat": -1
+      },
+      "bounds": {
+        "x": 13,
+        "y": 93,
+        "w": 175,
+        "h": 123
+      }
+    },
+    {
+      "key": "spider-hurt",
+      "character": "spider",
+      "role": "hurt",
+      "facing": "left",
+      "url": "runner/spider-hurt.png",
+      "frameConfig": {
+        "frameWidth": 240,
+        "frameHeight": 240,
+        "endFrame": 11
+      },
+      "animation": {
+        "key": "spider-hurt",
+        "start": 0,
+        "end": 11,
+        "frameRate": 30,
+        "repeat": -1
+      },
+      "bounds": {
+        "x": 40,
+        "y": 113,
+        "w": 148,
+        "h": 103
+      }
+    },
+    {
+      "key": "spider-dead",
+      "character": "spider",
+      "role": "dead",
+      "facing": "left",
+      "url": "runner/spider-dead.png",
+      "frameConfig": {
+        "frameWidth": 240,
+        "frameHeight": 240,
+        "endFrame": 15
+      },
+      "animation": {
+        "key": "spider-dead",
+        "start": 0,
+        "end": 15,
+        "frameRate": 30,
+        "repeat": -1
+      },
+      "bounds": {
+        "x": 35,
+        "y": 121,
+        "w": 166,
+        "h": 95
+      }
+    },
+    {
+      "key": "dust-idle",
+      "character": "dust",
+      "role": "idle",
+      "facing": "right",
+      "url": "runner/dust-idle.png",
+      "frameConfig": {
+        "frameWidth": 240,
+        "frameHeight": 240,
+        "endFrame": 13
+      },
+      "animation": {
+        "key": "dust-idle",
+        "start": 0,
+        "end": 13,
+        "frameRate": 30,
+        "repeat": -1
+      },
+      "bounds": {
+        "x": 76,
+        "y": 120,
+        "w": 91,
+        "h": 96
+      }
+    },
+    {
+      "key": "dust-run",
+      "character": "dust",
+      "role": "run",
+      "facing": "right",
+      "url": "runner/dust-run.png",
+      "frameConfig": {
+        "frameWidth": 240,
+        "frameHeight": 240,
+        "endFrame": 11
+      },
+      "animation": {
+        "key": "dust-run",
+        "start": 0,
+        "end": 11,
+        "frameRate": 30,
+        "repeat": -1
+      },
+      "bounds": {
+        "x": 79,
+        "y": 123,
+        "w": 89,
+        "h": 93
+      }
+    },
+    {
+      "key": "dust-attack",
+      "character": "dust",
+      "role": "attack",
+      "facing": "right",
+      "url": "runner/dust-attack.png",
+      "frameConfig": {
+        "frameWidth": 240,
+        "frameHeight": 240,
+        "endFrame": 15
+      },
+      "animation": {
+        "key": "dust-attack",
+        "start": 0,
+        "end": 15,
+        "frameRate": 30,
+        "repeat": -1
+      },
+      "bounds": {
+        "x": 26,
+        "y": 62,
+        "w": 192,
+        "h": 154
+      }
+    },
+    {
+      "key": "dust-hurt",
+      "character": "dust",
+      "role": "hurt",
+      "facing": "right",
+      "url": "runner/dust-hurt.png",
+      "frameConfig": {
+        "frameWidth": 240,
+        "frameHeight": 240,
+        "endFrame": 11
+      },
+      "animation": {
+        "key": "dust-hurt",
+        "start": 0,
+        "end": 11,
+        "frameRate": 30,
+        "repeat": -1
+      },
+      "bounds": {
+        "x": 76,
+        "y": 126,
+        "w": 92,
+        "h": 90
+      }
+    },
+    {
+      "key": "dust-dead",
+      "character": "dust",
+      "role": "dead",
+      "facing": "right",
+      "url": "runner/dust-dead.png",
+      "frameConfig": {
+        "frameWidth": 240,
+        "frameHeight": 240,
+        "endFrame": 14
+      },
+      "animation": {
+        "key": "dust-dead",
+        "start": 0,
+        "end": 14,
+        "frameRate": 30,
+        "repeat": -1
+      },
+      "bounds": {
+        "x": 50,
+        "y": 79,
+        "w": 144,
+        "h": 137
+      }
+    },
+    {
+      "key": "wafer-idle",
+      "character": "wafer",
+      "role": "idle",
+      "facing": "right",
+      "url": "runner/wafer-idle.png",
+      "frameConfig": {
+        "frameWidth": 160,
+        "frameHeight": 160,
+        "endFrame": 13
+      },
+      "animation": {
+        "key": "wafer-idle",
+        "start": 0,
+        "end": 13,
+        "frameRate": 30,
+        "repeat": -1
+      },
+      "bounds": {
+        "x": 33,
+        "y": 66,
+        "w": 94,
+        "h": 78
+      }
+    },
+    {
+      "key": "wafer-run",
+      "character": "wafer",
+      "role": "run",
+      "facing": "right",
+      "url": "runner/wafer-run.png",
+      "frameConfig": {
+        "frameWidth": 160,
+        "frameHeight": 160,
+        "endFrame": 17
+      },
+      "animation": {
+        "key": "wafer-run",
+        "start": 0,
+        "end": 17,
+        "frameRate": 30,
+        "repeat": -1
+      },
+      "bounds": {
+        "x": 34,
+        "y": 66,
+        "w": 92,
+        "h": 78
+      }
+    },
+    {
+      "key": "wafer-jump",
+      "character": "wafer",
+      "role": "jump",
+      "facing": "right",
+      "url": "runner/wafer-jump.png",
+      "frameConfig": {
+        "frameWidth": 160,
+        "frameHeight": 160,
+        "endFrame": 11
+      },
+      "animation": {
+        "key": "wafer-jump",
+        "start": 0,
+        "end": 11,
+        "frameRate": 30,
+        "repeat": 0
+      },
+      "bounds": {
+        "x": 33,
+        "y": 66,
+        "w": 93,
+        "h": 78
+      }
+    },
+    {
+      "key": "wafer-attack",
+      "character": "wafer",
+      "role": "attack",
+      "facing": "right",
+      "url": "runner/wafer-attack.png",
+      "frameConfig": {
+        "frameWidth": 160,
+        "frameHeight": 160,
+        "endFrame": 15
+      },
+      "animation": {
+        "key": "wafer-attack",
+        "start": 0,
+        "end": 15,
+        "frameRate": 30,
+        "repeat": 0
+      },
+      "bounds": {
+        "x": 29,
+        "y": 66,
+        "w": 101,
+        "h": 78
+      }
+    },
+    {
+      "key": "wafer-hurt",
+      "character": "wafer",
+      "role": "hurt",
+      "facing": "right",
+      "url": "runner/wafer-hurt.png",
+      "frameConfig": {
+        "frameWidth": 160,
+        "frameHeight": 160,
+        "endFrame": 15
+      },
+      "animation": {
+        "key": "wafer-hurt",
+        "start": 0,
+        "end": 15,
+        "frameRate": 30,
+        "repeat": 0
+      },
+      "bounds": {
+        "x": 33,
+        "y": 66,
+        "w": 93,
+        "h": 78
+      }
+    },
+    {
+      "key": "wafer-dead",
+      "character": "wafer",
+      "role": "dead",
+      "facing": "right",
+      "url": "runner/wafer-dead.png",
+      "frameConfig": {
+        "frameWidth": 160,
+        "frameHeight": 160,
+        "endFrame": 15
+      },
+      "animation": {
+        "key": "wafer-dead",
+        "start": 0,
+        "end": 15,
+        "frameRate": 30,
+        "repeat": 0
+      },
+      "bounds": {
+        "x": 45,
+        "y": 93,
+        "w": 70,
+        "h": 51
+      }
+    },
+    {
+      "key": "robot-idle",
+      "character": "robot",
+      "role": "idle",
+      "facing": "right",
+      "url": "runner/robot-idle.png",
+      "frameConfig": {
+        "frameWidth": 160,
+        "frameHeight": 160,
+        "endFrame": 13
+      },
+      "animation": {
+        "key": "robot-idle",
+        "start": 0,
+        "end": 13,
+        "frameRate": 30,
+        "repeat": -1
+      },
+      "bounds": {
+        "x": 32,
+        "y": 40,
+        "w": 95,
+        "h": 104
+      }
+    },
+    {
+      "key": "robot-run",
+      "character": "robot",
+      "role": "run",
+      "facing": "right",
+      "url": "runner/robot-run.png",
+      "frameConfig": {
+        "frameWidth": 160,
+        "frameHeight": 160,
+        "endFrame": 12
+      },
+      "animation": {
+        "key": "robot-run",
+        "start": 0,
+        "end": 12,
+        "frameRate": 30,
+        "repeat": -1
+      },
+      "bounds": {
+        "x": 26,
+        "y": 40,
+        "w": 107,
+        "h": 104
+      }
+    },
+    {
+      "key": "robot-attack",
+      "character": "robot",
+      "role": "attack",
+      "facing": "right",
+      "url": "runner/robot-attack.png",
+      "frameConfig": {
+        "frameWidth": 160,
+        "frameHeight": 160,
+        "endFrame": 13
+      },
+      "animation": {
+        "key": "robot-attack",
+        "start": 0,
+        "end": 13,
+        "frameRate": 30,
+        "repeat": 0
+      },
+      "bounds": {
+        "x": 20,
+        "y": 40,
+        "w": 120,
+        "h": 104
+      }
+    },
+    {
+      "key": "robot-hurt",
+      "character": "robot",
+      "role": "hurt",
+      "facing": "right",
+      "url": "runner/robot-hurt.png",
+      "frameConfig": {
+        "frameWidth": 160,
+        "frameHeight": 160,
+        "endFrame": 13
+      },
+      "animation": {
+        "key": "robot-hurt",
+        "start": 0,
+        "end": 13,
+        "frameRate": 30,
+        "repeat": 0
+      },
+      "bounds": {
+        "x": 23,
+        "y": 40,
+        "w": 114,
+        "h": 104
+      }
+    },
+    {
+      "key": "robot-dead",
+      "character": "robot",
+      "role": "dead",
+      "facing": "right",
+      "url": "runner/robot-dead.png",
+      "frameConfig": {
+        "frameWidth": 160,
+        "frameHeight": 160,
+        "endFrame": 15
+      },
+      "animation": {
+        "key": "robot-dead",
+        "start": 0,
+        "end": 15,
+        "frameRate": 30,
+        "repeat": 0
+      },
+      "bounds": {
+        "x": 42,
+        "y": 76,
+        "w": 76,
+        "h": 68
+      }
+    }
+  ],
+  "floors": {
+    "fab": {
+      "surface": 611,
+      "width": 1916,
+      "height": 821
+    },
+    "chemical": {
+      "surface": 537,
+      "width": 1916,
+      "height": 821
+    }
+  },
+  "audio": [
+    {
+      "key": "operator-jump",
+      "role": "jump",
+      "type": "audio",
+      "url": "audio/operator/jump.mp3",
+      "format": "mp3",
+      "durationMs": 254
+    },
+    {
+      "key": "operator-landing",
+      "role": "landing",
+      "type": "audio",
+      "url": "audio/operator/landing.mp3",
+      "format": "mp3",
+      "durationMs": 1000
+    },
+    {
+      "key": "operator-laser-shoot",
+      "role": "shoot",
+      "type": "audio",
+      "url": "audio/operator/laser-shoot.mp3",
+      "format": "mp3",
+      "durationMs": 1000
+    },
+    {
+      "key": "operator-laser-impact",
+      "role": "impact",
+      "type": "audio",
+      "url": "audio/operator/laser-crash.mp3",
+      "format": "wav",
+      "durationMs": 1000
+    },
+    {
+      "key": "operator-hurt",
+      "role": "hurt",
+      "type": "audio",
+      "url": "audio/operator/hurt.mp3",
+      "format": "wav",
+      "durationMs": 491
+    },
+    {
+      "key": "operator-run",
+      "role": "run",
+      "type": "audio",
+      "url": "audio/operator/run.mp3",
+      "format": "mp3",
+      "durationMs": 675
+    },
+    {
+      "key": "spider-attack-sfx",
+      "role": "attack",
+      "type": "audio",
+      "url": "audio/spider/attack.mp3",
+      "format": "wav",
+      "durationMs": 1000
+    },
+    {
+      "key": "dust-attack-sfx",
+      "role": "attack",
+      "type": "audio",
+      "url": "audio/dust/attack.mp3",
+      "format": "wav",
+      "durationMs": 1000
+    },
+    {
+      "key": "wafer-attack-sfx",
+      "role": "attack",
+      "type": "audio",
+      "url": "audio/wafer/attack.mp3",
+      "format": "wav",
+      "durationMs": 1000
+    },
+    {
+      "key": "wafer-hurt-sfx",
+      "role": "hurt",
+      "type": "audio",
+      "url": "audio/wafer/hurt.mp3",
+      "format": "wav",
+      "durationMs": 1000
+    },
+    {
+      "key": "wafer-walk-sfx",
+      "role": "walk",
+      "type": "audio",
+      "url": "audio/wafer/walk.mp3",
+      "format": "wav",
+      "durationMs": 1000
+    },
+    {
+      "key": "collectible-coin-sfx",
+      "role": "coin",
+      "type": "audio",
+      "url": "audio/coin.mp3",
+      "format": "wav",
+      "durationMs": 1000
+    },
+    {
+      "key": "collectible-life-sfx",
+      "role": "life",
+      "type": "audio",
+      "url": "audio/power-up.mp3",
+      "format": "wav",
+      "durationMs": 1000
+    },
+    {
+      "key": "music-wafer-flow",
+      "role": "wafer",
+      "type": "audio",
+      "url": "audio/music/wafer_flow.mp3",
+      "format": "mp3",
+      "durationMs": 199848
+    },
+    {
+      "key": "music-factory-loop",
+      "role": "factory",
+      "type": "audio",
+      "url": "audio/music/factory_loop.mp3",
+      "format": "mp3",
+      "durationMs": 154152
+    },
+    {
+      "key": "music-wafer-rush",
+      "name": "Wafer Rush",
+      "role": "arena",
+      "type": "audio",
+      "url": "audio/music/wafer_rush.mp3",
+      "format": "mp3",
+      "durationMs": 59317
+    },
+    {
+      "key": "music-wafer-rush-2",
+      "name": "Wafer Rush 2",
+      "role": "arena",
+      "type": "audio",
+      "url": "audio/music/wafer_rush-2.mp3",
+      "format": "mp3",
+      "durationMs": 75541
+    }
+  ],
+  "collectibles": [
+    {
+      "key": "pickup-coin-gold",
+      "kind": "coin",
+      "type": "image",
+      "url": "collectibles/frame_0020.png",
+      "width": 277,
+      "height": 277
+    },
+    {
+      "key": "pickup-coin-silver",
+      "kind": "coin",
+      "type": "image",
+      "url": "collectibles/frame_0021.png",
+      "width": 277,
+      "height": 277
+    },
+    {
+      "key": "pickup-coin-bronze",
+      "kind": "coin",
+      "type": "image",
+      "url": "collectibles/frame_0022.png",
+      "width": 277,
+      "height": 277
+    },
+    {
+      "key": "pickup-life",
+      "kind": "life",
+      "type": "image",
+      "url": "collectibles/frame_0009.png",
+      "width": 277,
+      "height": 277
+    }
+  ],
+  "hud": [
+    {
+      "key": "hud-operator",
+      "role": "health",
+      "character": "operator",
+      "url": "runner/hud-operator.png",
+      "width": 1200,
+      "height": 400,
+      "content": {
+        "x": 354,
+        "y": 172,
+        "w": 711,
+        "h": 76
+      }
+    },
+    {
+      "key": "hud-wafer",
+      "role": "health",
+      "character": "wafer",
+      "url": "runner/hud-wafer.png",
+      "width": 1200,
+      "height": 400,
+      "content": {
+        "x": 406,
+        "y": 158,
+        "w": 670,
+        "h": 94
+      }
+    },
+    {
+      "key": "hud-coins",
+      "role": "coins",
+      "url": "runner/hud-coins.png",
+      "width": 701,
+      "height": 247,
+      "content": {
+        "x": 243,
+        "y": 87,
+        "w": 404,
+        "h": 84
+      }
+    }
+  ]
+}

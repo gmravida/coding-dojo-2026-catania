@@ -1,0 +1,529 @@
+{
+  "$comment": "Asset index for the Phaser 4 loader. Frame metadata verified against the real PNG headers (cols*frameWidth === imageWidth, rows*frameHeight === imageHeight). 'bounds' are in SOURCE FRAME pixel space with the origin at the frame's top-left. 'visual' was measured as the union of the non-transparent pixel bbox across every frame of the animation. Rewritten by the Character Gym save action.",
+  "version": 2,
+  "generatedFrom": "public/assets",
+  "baseUrl": "assets/",
+  "music": [
+    { "key": "music-wafer-flow", "role": "wafer", "type": "audio", "url": "audio/music/wafer_flow.mp3", "format": "mp3", "durationMs": 199848 },
+    { "key": "music-factory-loop", "role": "factory", "type": "audio", "url": "audio/music/factory_loop.mp3", "format": "mp3", "durationMs": 154152 },
+    { "key": "music-wafer-rush", "name": "Wafer Rush", "role": "arena", "type": "audio", "url": "audio/music/wafer_rush.mp3", "format": "mp3", "durationMs": 59317 },
+    { "key": "music-wafer-rush-2", "name": "Wafer Rush 2", "role": "arena", "type": "audio", "url": "audio/music/wafer_rush-2.mp3", "format": "mp3", "durationMs": 75541 }
+  ],
+  "audioDefaults": {
+    "enabled": true,
+    "musicKey": "music-wafer-rush",
+    "masterVolume": 1,
+    "musicVolume": 0.22,
+    "effectsVolume": 1,
+    "footstepsEnabled": true,
+    "footstepsVolume": 0.22
+  },
+  "sfx": [
+    { "key": "collectible-coin-sfx", "role": "coin", "type": "audio", "url": "audio/coin.mp3", "format": "wav", "durationMs": 1000 },
+    { "key": "collectible-life-sfx", "role": "life", "type": "audio", "url": "audio/power-up.mp3", "format": "wav", "durationMs": 1000 }
+  ],
+  "collectibles": [
+    { "key": "pickup-coin-gold", "kind": "coin", "type": "image", "url": "collectibles/frame_0020.png", "width": 277, "height": 277 },
+    { "key": "pickup-coin-silver", "kind": "coin", "type": "image", "url": "collectibles/frame_0021.png", "width": 277, "height": 277 },
+    { "key": "pickup-coin-bronze", "kind": "coin", "type": "image", "url": "collectibles/frame_0022.png", "width": 277, "height": 277 },
+    { "key": "pickup-life", "kind": "life", "type": "image", "url": "collectibles/frame_0009.png", "width": 277, "height": 277 }
+  ],
+  "hud": [
+    { "key": "hud-health", "role": "health", "character": "operator", "type": "image", "url": "hud/hud-coins.png", "sheet": { "imageWidth": 1254, "imageHeight": 1254 }, "frame": { "x": 45, "y": 304, "w": 1162, "h": 324 }, "content": { "x": 335, "y": 134, "w": 711, "h": 76 } },
+    { "key": "hud-wafer", "role": "health", "character": "wafer", "type": "image", "url": "hud/wafer-hud.png", "sheet": { "imageWidth": 1254, "imageHeight": 1254 }, "frame": { "x": 65, "y": 413, "w": 1124, "h": 367 }, "content": { "x": 370, "y": 145, "w": 700, "h": 84 } },
+    { "key": "hud-coins", "role": "coins", "type": "image", "url": "hud/hud-coins.png", "sheet": { "imageWidth": 1254, "imageHeight": 1254 }, "frame": { "x": 183, "y": 686, "w": 701, "h": 247 }, "content": { "x": 243, "y": 87, "w": 404, "h": 84 } },
+    { "key": "hud-diamonds", "role": "diamonds", "type": "image", "url": "hud/hud-diamonds.png", "sheet": { "imageWidth": 1254, "imageHeight": 394 }, "frame": { "x": 187, "y": 61, "w": 844, "h": 231 }, "content": { "x": 236, "y": 69, "w": 561, "h": 109 } }
+  ],
+  "arenaSets": [
+    { "key": "industrial-arenas", "type": "manifest", "url": "backgrounds/arena/arena-config.json" }
+  ],
+  "characters": {
+    "operator": {
+      "textureKeyPrefix": "operator-",
+      "facing": "right",
+      "$facingNote": "Source art already faces right (visor and muzzle flash point +x), so flipX stays false for a left-to-right side scroller.",
+      "assets": [
+        {
+          "key": "operator-idle",
+          "role": "idle",
+          "type": "spritesheet",
+          "url": "operator/idle/idle.png",
+          "config": "operator/idle/idle.json",
+          "frameConfig": { "frameWidth": 512, "frameHeight": 512 },
+          "sheet": { "cols": 4, "rows": 3, "frames": 12, "imageWidth": 2048, "imageHeight": 1536 },
+          "animation": { "key": "operator-idle", "start": 0, "end": 11, "frameRate": 30, "repeat": -1 },
+          "bounds": {
+            "visual": { "x": 180, "y": 156, "w": 176, "h": 176 },
+            "collision": { "x": 180, "y": 156, "w": 176, "h": 176 },
+            "attack": { "x": 180, "y": 156, "w": 176, "h": 176 }
+          }
+        },
+        {
+          "key": "operator-run",
+          "role": "run",
+          "type": "spritesheet",
+          "url": "operator/run/run.png",
+          "config": "operator/run/run.json",
+          "frameConfig": { "frameWidth": 384, "frameHeight": 384 },
+          "sheet": { "cols": 4, "rows": 4, "frames": 16, "imageWidth": 1536, "imageHeight": 1536 },
+          "animation": { "key": "operator-run", "start": 0, "end": 15, "frameRate": 30, "repeat": -1 },
+          "bounds": {
+            "visual": { "x": 128, "y": 116, "w": 136, "h": 148 },
+            "collision": { "x": 128, "y": 116, "w": 136, "h": 148 },
+            "attack": { "x": 128, "y": 116, "w": 136, "h": 148 }
+          }
+        },
+        {
+          "key": "operator-jump",
+          "role": "jump",
+          "type": "spritesheet",
+          "url": "operator/jump/jump.png",
+          "config": "operator/jump/jump.json",
+          "frameConfig": { "frameWidth": 384, "frameHeight": 384 },
+          "sheet": { "cols": 4, "rows": 3, "frames": 12, "imageWidth": 1536, "imageHeight": 1152 },
+          "animation": { "key": "operator-jump", "start": 0, "end": 11, "frameRate": 30, "repeat": 0 },
+          "bounds": {
+            "visual": { "x": 128, "y": 48, "w": 136, "h": 248 },
+            "collision": { "x": 128, "y": 48, "w": 136, "h": 248 },
+            "attack": { "x": 128, "y": 48, "w": 136, "h": 248 }
+          }
+        },
+        {
+          "key": "operator-shot",
+          "role": "attack",
+          "type": "spritesheet",
+          "url": "operator/attack/shot.png",
+          "config": "operator/attack/shot.json",
+          "frameConfig": { "frameWidth": 384, "frameHeight": 384 },
+          "sheet": { "cols": 4, "rows": 3, "frames": 10, "imageWidth": 1536, "imageHeight": 1152 },
+          "animation": { "key": "operator-shot", "start": 0, "end": 9, "frameRate": 30, "repeat": 0 },
+          "$note": "Grid holds 12 cells; cells 10-11 measured fully transparent, so the animation stops at 9. Attack bounds default to the muzzle flash measured on frames 1-2 past the resting silhouette's right edge (x=268).",
+          "bounds": {
+            "visual": { "x": 132, "y": 120, "w": 204, "h": 128 },
+            "collision": { "x": 132, "y": 120, "w": 204, "h": 128 },
+            "attack": { "x": 268, "y": 144, "w": 68, "h": 48 }
+          }
+        },
+        {
+          "key": "operator-hurt",
+          "role": "hurt",
+          "type": "spritesheet",
+          "url": "operator/hurt/hurt.png",
+          "config": "operator/hurt/hurt.json",
+          "frameConfig": { "frameWidth": 384, "frameHeight": 384 },
+          "sheet": { "cols": 4, "rows": 3, "frames": 12, "imageWidth": 1536, "imageHeight": 1152 },
+          "animation": { "key": "operator-hurt", "start": 0, "end": 11, "frameRate": 30, "repeat": 0 },
+          "bounds": {
+            "visual": { "x": 136, "y": 116, "w": 144, "h": 132 },
+            "collision": { "x": 136, "y": 116, "w": 144, "h": 132 },
+            "attack": { "x": 136, "y": 116, "w": 144, "h": 132 }
+          }
+        },
+        {
+          "key": "operator-bullet",
+          "role": "projectile",
+          "type": "spritesheet",
+          "url": "operator/bullet/bullet.png",
+          "config": "operator/bullet/bullet.json",
+          "frameConfig": { "frameWidth": 512, "frameHeight": 512 },
+          "sheet": { "cols": 3, "rows": 2, "frames": 6, "imageWidth": 1536, "imageHeight": 1024 },
+          "animation": { "key": "operator-bullet", "start": 0, "end": 5, "frameRate": 30, "repeat": -1 },
+          "bounds": {
+            "visual": { "x": 188, "y": 232, "w": 139, "h": 48 },
+            "collision": { "x": 188, "y": 232, "w": 139, "h": 48 },
+            "attack": { "x": 188, "y": 232, "w": 139, "h": 48 }
+          }
+        },
+        {
+          "key": "operator-bullet-impact",
+          "role": "impact",
+          "type": "spritesheet",
+          "url": "operator/bullet-impact/bullet-impact.png",
+          "config": "operator/bullet-impact/bullet-impact.json",
+          "frameConfig": { "frameWidth": 256, "frameHeight": 219 },
+          "sheet": { "cols": 4, "rows": 3, "frames": 12, "imageWidth": 1024, "imageHeight": 657 },
+          "animation": { "key": "operator-bullet-impact", "start": 0, "end": 5, "frameRate": 30, "repeat": 0 },
+          "$note": "Source config declares 12 frames, but cells 6, 9, 10 and 11 measured fully transparent and 7-8 hold only 96 stray pixels. Playing 0-5 avoids a blank gap mid-burst.",
+          "bounds": {
+            "visual": { "x": 8, "y": 13, "w": 236, "h": 164 },
+            "collision": { "x": 8, "y": 13, "w": 236, "h": 164 },
+            "attack": { "x": 8, "y": 13, "w": 236, "h": 164 }
+          }
+        }
+      ],
+      "audio": [
+        { "key": "operator-jump", "role": "jump", "type": "audio", "url": "audio/operator/jump.mp3", "format": "mp3", "durationMs": 254 },
+        { "key": "operator-landing", "role": "landing", "type": "audio", "url": "audio/operator/landing.mp3", "format": "mp3", "durationMs": 1000 },
+        { "key": "operator-laser-shoot", "role": "shoot", "type": "audio", "url": "audio/operator/laser-shoot.mp3", "format": "mp3", "durationMs": 1000 },
+        { "key": "operator-laser-impact", "role": "impact", "type": "audio", "url": "audio/operator/laser-crash.mp3", "format": "wav", "durationMs": 1000 },
+        { "key": "operator-hurt", "role": "hurt", "type": "audio", "url": "audio/operator/hurt.mp3", "format": "wav", "durationMs": 491 },
+        { "key": "operator-run", "role": "run", "type": "audio", "url": "audio/operator/run.mp3", "format": "mp3", "durationMs": 675 }
+      ]
+    },
+    "spider": {
+      "textureKeyPrefix": "spider-",
+      "facing": "left",
+      "$facingNote": "Confirmed by live movement test: the source art actually faces left (previously mis-declared as right, which made the character face away from its movement direction).",
+      "$backgroundNote": "idle, attack and dead contain a near-black, partially opaque background. Their visual bounds use foreground segmentation instead of alpha-only bounds.",
+      "assets": [
+        {
+          "key": "spider-idle",
+          "role": "idle",
+          "type": "spritesheet",
+          "url": "spider/idle/idle.png",
+          "config": "spider/idle/idle.json",
+          "frameConfig": { "frameWidth": 960, "frameHeight": 960 },
+          "sheet": { "cols": 4, "rows": 3, "frames": 12, "imageWidth": 3840, "imageHeight": 2880 },
+          "animation": { "key": "spider-idle", "start": 0, "end": 11, "frameRate": 30, "repeat": -1 },
+          "bounds": {
+            "visual": { "x": 264, "y": 299, "w": 456, "h": 323 },
+            "collision": { "x": 264, "y": 299, "w": 456, "h": 323 },
+            "attack": { "x": 264, "y": 299, "w": 456, "h": 323 }
+          }
+        },
+        {
+          "key": "spider-run",
+          "role": "run",
+          "type": "spritesheet",
+          "url": "spider/run/run.png",
+          "config": "spider/run/run.json",
+          "frameConfig": { "frameWidth": 960, "frameHeight": 960 },
+          "sheet": { "cols": 4, "rows": 4, "frames": 16, "imageWidth": 3840, "imageHeight": 3840 },
+          "animation": { "key": "spider-run", "start": 0, "end": 15, "frameRate": 30, "repeat": -1 },
+          "bounds": {
+            "visual": { "x": 220, "y": 278, "w": 535, "h": 439 },
+            "collision": { "x": 220, "y": 278, "w": 535, "h": 439 },
+            "attack": { "x": 220, "y": 278, "w": 535, "h": 439 }
+          }
+        },
+        {
+          "key": "spider-attack",
+          "role": "attack",
+          "type": "spritesheet",
+          "url": "spider/attack/attack.png",
+          "config": "spider/attack/attack.json",
+          "frameConfig": { "frameWidth": 960, "frameHeight": 960 },
+          "sheet": { "cols": 4, "rows": 3, "frames": 12, "imageWidth": 3840, "imageHeight": 2880 },
+          "animation": { "key": "spider-attack", "start": 0, "end": 11, "frameRate": 30, "repeat": -1 },
+          "bounds": {
+            "visual": { "x": 120, "y": 218, "w": 607, "h": 427 },
+            "collision": { "x": 120, "y": 218, "w": 607, "h": 427 },
+            "attack": { "x": 120, "y": 218, "w": 607, "h": 427 }
+          }
+        },
+        {
+          "key": "spider-hurt",
+          "role": "hurt",
+          "type": "spritesheet",
+          "url": "spider/hurt/hurt.png",
+          "config": "spider/hurt/hurt.json",
+          "frameConfig": { "frameWidth": 960, "frameHeight": 960 },
+          "sheet": { "cols": 4, "rows": 3, "frames": 12, "imageWidth": 3840, "imageHeight": 2880 },
+          "animation": { "key": "spider-hurt", "start": 0, "end": 11, "frameRate": 30, "repeat": -1 },
+          "bounds": {
+            "visual": { "x": 203, "y": 255, "w": 543, "h": 378 },
+            "collision": { "x": 203, "y": 255, "w": 543, "h": 378 },
+            "attack": { "x": 203, "y": 255, "w": 543, "h": 378 }
+          }
+        },
+        {
+          "key": "spider-dead",
+          "role": "dead",
+          "type": "spritesheet",
+          "url": "spider/dead/dead.png",
+          "config": "spider/dead/dead.json",
+          "frameConfig": { "frameWidth": 960, "frameHeight": 960 },
+          "sheet": { "cols": 4, "rows": 4, "frames": 16, "imageWidth": 3840, "imageHeight": 3840 },
+          "animation": { "key": "spider-dead", "start": 0, "end": 15, "frameRate": 30, "repeat": -1 },
+          "bounds": {
+            "visual": { "x": 204, "y": 300, "w": 568, "h": 340 },
+            "collision": { "x": 204, "y": 300, "w": 568, "h": 340 },
+            "attack": { "x": 204, "y": 300, "w": 568, "h": 340 }
+          }
+        }
+      ],
+      "audio": [
+        { "key": "spider-attack-sfx", "role": "attack", "type": "audio", "url": "audio/spider/attack.mp3", "format": "wav", "durationMs": 1000 }
+      ]
+    },
+    "dust": {
+      "textureKeyPrefix": "dust-",
+      "facing": "right",
+      "$facingNote": "Source art is authored facing right: the side profile and running pose point toward +x.",
+      "$backgroundNote": "The regenerated idle sheet has clean transparency. Legacy run/attack/hurt/dead sheets contain dark purple semi-opaque generation residue and use foreground segmentation for visual bounds.",
+      "assets": [
+        {
+          "key": "dust-idle",
+          "role": "idle",
+          "type": "spritesheet",
+          "url": "dust/idle/idle.png",
+          "config": "dust/idle/idle.json",
+          "frameConfig": { "frameWidth": 512, "frameHeight": 512 },
+          "sheet": { "cols": 4, "rows": 4, "frames": 14, "imageWidth": 2048, "imageHeight": 2048 },
+          "animation": { "key": "dust-idle", "start": 0, "end": 13, "frameRate": 30, "repeat": -1 },
+          "$note": "Regenerated 512x512 frames with clean alpha. Grid holds 16 cells; cells 14-15 were measured fully transparent.",
+          "bounds": {
+            "visual": { "x": 129, "y": 124, "w": 228, "h": 241 },
+            "collision": { "x": 129, "y": 124, "w": 228, "h": 241 },
+            "attack": { "x": 129, "y": 124, "w": 228, "h": 241 }
+          }
+        },
+        {
+          "key": "dust-run",
+          "role": "run",
+          "type": "spritesheet",
+          "url": "dust/run/run.png",
+          "config": "dust/run/run.json",
+          "frameConfig": { "frameWidth": 960, "frameHeight": 960 },
+          "sheet": { "cols": 4, "rows": 3, "frames": 12, "imageWidth": 3840, "imageHeight": 2880 },
+          "animation": { "key": "dust-run", "start": 0, "end": 11, "frameRate": 30, "repeat": -1 },
+          "bounds": {
+            "visual": { "x": 264, "y": 274, "w": 417, "h": 437 },
+            "collision": { "x": 264, "y": 274, "w": 417, "h": 437 },
+            "attack": { "x": 264, "y": 274, "w": 417, "h": 437 }
+          }
+        },
+        {
+          "key": "dust-attack",
+          "role": "attack",
+          "type": "spritesheet",
+          "url": "dust/attack/attack.png",
+          "config": "dust/attack/attack.json",
+          "frameConfig": { "frameWidth": 960, "frameHeight": 960 },
+          "sheet": { "cols": 4, "rows": 4, "frames": 16, "imageWidth": 3840, "imageHeight": 3840 },
+          "animation": { "key": "dust-attack", "start": 0, "end": 15, "frameRate": 30, "repeat": -1 },
+          "bounds": {
+            "visual": { "x": 100, "y": 131, "w": 770, "h": 611 },
+            "collision": { "x": 100, "y": 131, "w": 770, "h": 611 },
+            "attack": { "x": 100, "y": 131, "w": 770, "h": 611 }
+          }
+        },
+        {
+          "key": "dust-hurt",
+          "role": "hurt",
+          "type": "spritesheet",
+          "url": "dust/hurt/hurt.png",
+          "config": "dust/hurt/hurt.json",
+          "frameConfig": { "frameWidth": 960, "frameHeight": 960 },
+          "sheet": { "cols": 4, "rows": 3, "frames": 12, "imageWidth": 3840, "imageHeight": 2880 },
+          "animation": { "key": "dust-hurt", "start": 0, "end": 11, "frameRate": 30, "repeat": -1 },
+          "bounds": {
+            "visual": { "x": 264, "y": 268, "w": 432, "h": 424 },
+            "collision": { "x": 264, "y": 268, "w": 432, "h": 424 },
+            "attack": { "x": 264, "y": 268, "w": 432, "h": 424 }
+          }
+        },
+        {
+          "key": "dust-dead",
+          "role": "dead",
+          "type": "spritesheet",
+          "url": "dust/dead/dead.png",
+          "config": "dust/dead/dead.json",
+          "frameConfig": { "frameWidth": 960, "frameHeight": 960 },
+          "sheet": { "cols": 4, "rows": 4, "frames": 15, "imageWidth": 3840, "imageHeight": 3840 },
+          "animation": { "key": "dust-dead", "start": 0, "end": 14, "frameRate": 30, "repeat": -1 },
+          "$note": "Grid holds 16 cells; cell 15 was measured fully transparent.",
+          "bounds": {
+            "visual": { "x": 179, "y": 11, "w": 590, "h": 676 },
+            "collision": { "x": 179, "y": 11, "w": 590, "h": 676 },
+            "attack": { "x": 179, "y": 11, "w": 590, "h": 676 }
+          }
+        }
+      ],
+      "audio": [
+        { "key": "dust-attack-sfx", "role": "attack", "type": "audio", "url": "audio/dust/attack.mp3", "format": "wav", "durationMs": 1000 }
+      ]
+    },
+    "wafer": {
+      "textureKeyPrefix": "wafer-",
+      "facing": "right",
+      "$facingNote": "Source attack art extends toward +x; verify the nearly front-facing run cycle live when tuning.",
+      "audio": [
+        { "key": "wafer-attack-sfx", "role": "attack", "type": "audio", "url": "audio/wafer/attack.mp3", "format": "wav", "durationMs": 1000 },
+        { "key": "wafer-hurt-sfx", "role": "hurt", "type": "audio", "url": "audio/wafer/hurt.mp3", "format": "wav", "durationMs": 1000 },
+        { "key": "wafer-walk-sfx", "role": "walk", "type": "audio", "url": "audio/wafer/walk.mp3", "format": "wav", "durationMs": 1000 }
+      ],
+      "assets": [
+        {
+          "key": "wafer-idle",
+          "role": "idle",
+          "type": "spritesheet",
+          "url": "wafer/idle/idle.png",
+          "config": "wafer/idle/idle.json",
+          "frameConfig": { "frameWidth": 960, "frameHeight": 960 },
+          "sheet": { "cols": 4, "rows": 4, "frames": 14, "imageWidth": 3840, "imageHeight": 3840 },
+          "animation": { "key": "wafer-idle", "start": 0, "end": 13, "frameRate": 30, "repeat": -1 },
+          "$note": "Grid holds 16 cells; cells 14-15 were measured fully transparent.",
+          "bounds": {
+            "visual": { "x": 293, "y": 327, "w": 383, "h": 318 },
+            "collision": { "x": 293, "y": 327, "w": 383, "h": 318 },
+            "attack": { "x": 293, "y": 327, "w": 383, "h": 318 }
+          }
+        },
+        {
+          "key": "wafer-run",
+          "role": "run",
+          "type": "spritesheet",
+          "url": "wafer/run/run.png",
+          "config": "wafer/run/run.json",
+          "frameConfig": { "frameWidth": 960, "frameHeight": 960 },
+          "sheet": { "cols": 5, "rows": 4, "frames": 18, "imageWidth": 4800, "imageHeight": 3840 },
+          "animation": { "key": "wafer-run", "start": 0, "end": 17, "frameRate": 30, "repeat": -1 },
+          "$note": "Grid holds 20 cells; cells 18-19 were measured fully transparent.",
+          "bounds": {
+            "visual": { "x": 270, "y": 292, "w": 419, "h": 356 },
+            "collision": { "x": 270, "y": 292, "w": 419, "h": 356 },
+            "attack": { "x": 270, "y": 292, "w": 419, "h": 356 }
+          }
+        },
+        {
+          "key": "wafer-jump",
+          "role": "jump",
+          "type": "spritesheet",
+          "url": "wafer/jump/jump.png",
+          "config": "wafer/jump/jump.json",
+          "frameConfig": { "frameWidth": 960, "frameHeight": 960 },
+          "sheet": { "cols": 4, "rows": 3, "frames": 12, "imageWidth": 3840, "imageHeight": 2880 },
+          "animation": { "key": "wafer-jump", "start": 0, "end": 11, "frameRate": 30, "repeat": 0 },
+          "bounds": {
+            "visual": { "x": 278, "y": 378, "w": 403, "h": 339 },
+            "collision": { "x": 278, "y": 378, "w": 403, "h": 339 },
+            "attack": { "x": 278, "y": 378, "w": 403, "h": 339 }
+          }
+        },
+        {
+          "key": "wafer-attack",
+          "role": "attack",
+          "type": "spritesheet",
+          "url": "wafer/attack/attack.png",
+          "config": "wafer/attack/attack.json",
+          "frameConfig": { "frameWidth": 960, "frameHeight": 960 },
+          "sheet": { "cols": 4, "rows": 4, "frames": 16, "imageWidth": 3840, "imageHeight": 3840 },
+          "animation": { "key": "wafer-attack", "start": 0, "end": 15, "frameRate": 30, "repeat": 0 },
+          "bounds": {
+            "visual": { "x": 269, "y": 314, "w": 427, "h": 331 },
+            "collision": { "x": 269, "y": 314, "w": 427, "h": 331 },
+            "attack": { "x": 269, "y": 314, "w": 427, "h": 331 }
+          }
+        },
+        {
+          "key": "wafer-hurt",
+          "role": "hurt",
+          "type": "spritesheet",
+          "url": "wafer/hurt/hurt.png",
+          "config": "wafer/hurt/hurt.json",
+          "frameConfig": { "frameWidth": 960, "frameHeight": 960 },
+          "sheet": { "cols": 4, "rows": 4, "frames": 16, "imageWidth": 3840, "imageHeight": 3840 },
+          "animation": { "key": "wafer-hurt", "start": 0, "end": 15, "frameRate": 30, "repeat": 0 },
+          "bounds": {
+            "visual": { "x": 279, "y": 298, "w": 414, "h": 347 },
+            "collision": { "x": 279, "y": 298, "w": 414, "h": 347 },
+            "attack": { "x": 279, "y": 298, "w": 414, "h": 347 }
+          }
+        },
+        {
+          "key": "wafer-dead",
+          "role": "dead",
+          "type": "spritesheet",
+          "url": "wafer/dead/dead.png",
+          "config": "wafer/dead/dead.json",
+          "frameConfig": { "frameWidth": 960, "frameHeight": 960 },
+          "sheet": { "cols": 4, "rows": 4, "frames": 16, "imageWidth": 3840, "imageHeight": 3840 },
+          "animation": { "key": "wafer-dead", "start": 0, "end": 15, "frameRate": 30, "repeat": 0 },
+          "bounds": {
+            "visual": { "x": 232, "y": 325, "w": 516, "h": 373 },
+            "collision": { "x": 232, "y": 325, "w": 516, "h": 373 },
+            "attack": { "x": 232, "y": 325, "w": 516, "h": 373 }
+          }
+        }
+      ]
+    },
+    "robot": {
+      "textureKeyPrefix": "robot-",
+      "facing": "right",
+      "$facingNote": "Source attack art extends toward +x; verify the nearly front-facing walk cycle live when tuning.",
+      "assets": [
+        {
+          "key": "robot-idle",
+          "role": "idle",
+          "type": "spritesheet",
+          "url": "robot/idle/idle.png",
+          "config": "robot/idle/idle.json",
+          "frameConfig": { "frameWidth": 960, "frameHeight": 960 },
+          "sheet": { "cols": 4, "rows": 4, "frames": 14, "imageWidth": 3840, "imageHeight": 3840 },
+          "animation": { "key": "robot-idle", "start": 0, "end": 13, "frameRate": 30, "repeat": -1 },
+          "$note": "Grid holds 16 cells; cells 14-15 were measured fully transparent.",
+          "bounds": {
+            "visual": { "x": 183, "y": 71, "w": 666, "h": 728 },
+            "collision": { "x": 183, "y": 71, "w": 666, "h": 728 },
+            "attack": { "x": 183, "y": 71, "w": 666, "h": 728 }
+          }
+        },
+        {
+          "key": "robot-run",
+          "role": "run",
+          "type": "spritesheet",
+          "url": "robot/walk/walk.png",
+          "config": "robot/walk/walk.json",
+          "frameConfig": { "frameWidth": 960, "frameHeight": 960 },
+          "sheet": { "cols": 4, "rows": 4, "frames": 13, "imageWidth": 3840, "imageHeight": 3840 },
+          "animation": { "key": "robot-run", "start": 0, "end": 12, "frameRate": 30, "repeat": -1 },
+          "$note": "Source clip is named walk; it is mapped to the Gym run role. Grid cells 13-15 were measured fully transparent.",
+          "bounds": {
+            "visual": { "x": 95, "y": 60, "w": 778, "h": 759 },
+            "collision": { "x": 95, "y": 60, "w": 778, "h": 759 },
+            "attack": { "x": 95, "y": 60, "w": 778, "h": 759 }
+          }
+        },
+        {
+          "key": "robot-attack",
+          "role": "attack",
+          "type": "spritesheet",
+          "url": "robot/attack/attack.png",
+          "config": "robot/attack/attack.json",
+          "frameConfig": { "frameWidth": 960, "frameHeight": 960 },
+          "sheet": { "cols": 4, "rows": 4, "frames": 14, "imageWidth": 3840, "imageHeight": 3840 },
+          "animation": { "key": "robot-attack", "start": 0, "end": 13, "frameRate": 30, "repeat": 0 },
+          "$note": "Grid holds 16 cells; cells 14-15 were measured fully transparent.",
+          "bounds": {
+            "visual": { "x": 125, "y": 97, "w": 835, "h": 721 },
+            "collision": { "x": 125, "y": 97, "w": 835, "h": 721 },
+            "attack": { "x": 125, "y": 97, "w": 835, "h": 721 }
+          }
+        },
+        {
+          "key": "robot-hurt",
+          "role": "hurt",
+          "type": "spritesheet",
+          "url": "robot/hurt/hurt.png",
+          "config": "robot/hurt/hurt.json",
+          "frameConfig": { "frameWidth": 960, "frameHeight": 960 },
+          "sheet": { "cols": 4, "rows": 4, "frames": 14, "imageWidth": 3840, "imageHeight": 3840 },
+          "animation": { "key": "robot-hurt", "start": 0, "end": 13, "frameRate": 30, "repeat": 0 },
+          "$note": "Grid holds 16 cells; cells 14-15 were measured fully transparent.",
+          "bounds": {
+            "visual": { "x": 74, "y": 80, "w": 817, "h": 744 },
+            "collision": { "x": 74, "y": 80, "w": 817, "h": 744 },
+            "attack": { "x": 74, "y": 80, "w": 817, "h": 744 }
+          }
+        },
+        {
+          "key": "robot-dead",
+          "role": "dead",
+          "type": "spritesheet",
+          "url": "robot/dead/dead.png",
+          "config": "robot/dead/dead.json",
+          "frameConfig": { "frameWidth": 960, "frameHeight": 960 },
+          "sheet": { "cols": 4, "rows": 4, "frames": 16, "imageWidth": 3840, "imageHeight": 3840 },
+          "animation": { "key": "robot-dead", "start": 0, "end": 15, "frameRate": 30, "repeat": 0 },
+          "$note": "All 16 cells contain artwork. The source analyzer metadata names the clip die, but the measured files are dead.png and dead.json.",
+          "bounds": {
+            "visual": { "x": 0, "y": 22, "w": 951, "h": 849 },
+            "collision": { "x": 0, "y": 22, "w": 951, "h": 849 },
+            "attack": { "x": 0, "y": 22, "w": 951, "h": 849 }
+          }
+        }
+      ]
+    }
+  }
+}

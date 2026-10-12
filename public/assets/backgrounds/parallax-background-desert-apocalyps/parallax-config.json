@@ -1,0 +1,70 @@
+{
+  "generator": "Sorceress Parallax Background Generator",
+  "exportedAt": "2026-09-10T11:53:39.540Z",
+  "scene": {
+    "aspectRatio": "21:9",
+    "resolution": "1K",
+    "layerCount": 4,
+    "compositeOrder": "Draw back-to-front: background, then midground, then ground, then the player character, then foreground (occluder).",
+    "units": {
+      "scale": "multiplier, 1 = native size (range 0.3–3)",
+      "verticalOffsetPercent": "percent of stage height, positive = down (range -100..100)",
+      "restoreGreenPercent": "amount of original green re-blended after key-out (0 = fully despilled)",
+      "suggestedParallaxFactor": "relative horizontal scroll speed vs camera; foreground ≈ 1.35 (fastest), ground = 1.0"
+    }
+  },
+  "layers": [
+    {
+      "slot": 1,
+      "role": "ground",
+      "file": "layer-1-ground.png",
+      "transparentPng": false,
+      "pixelArt": false,
+      "scale": 1,
+      "verticalOffsetPercent": 2,
+      "restoreGreenPercent": 0,
+      "hiddenInPreview": false,
+      "suggestedParallaxFactor": 1,
+      "prompt": "pixel art ground: post-apocalyptic desert ground with small rusted props along the bottom edge, tiny bits of debris, cracked soil, and a narrow strip of terrain for the player to walk on; muted desert colors with dusty atmosphere; the upper two-thirds empty, set against a solid uniform pure chroma green screen background (#00b140), flat even lighting, crisp clean edges, no green spill on the subject, background a single flat green color only with nothing else, every prop fully inside the frame with a clear empty green margin on the left and right borders, soft organic silhouettes only, nothing cropped or cut off by the left or right edge, no hard vertical cut lines. Seamlessly repeating left and right edges with no hard vertical seams — left and right borders empty or perfectly matching for a clean horizontal side-scrolling loop"
+    },
+    {
+      "slot": 2,
+      "role": "midground",
+      "file": "layer-2-midground.png",
+      "transparentPng": true,
+      "pixelArt": false,
+      "scale": 1.3,
+      "verticalOffsetPercent": 19,
+      "restoreGreenPercent": 0,
+      "hiddenInPreview": false,
+      "suggestedParallaxFactor": 0.6,
+      "prompt": "pixel art midground: derelict refinery structures, collapsed industrial frames, scattered pipes and warehouses with broken windows, spaced to reveal gaps; warm desert hues, subtle haze, set against a solid uniform pure chroma green screen background (#00b140), flat even lighting, crisp clean edges, no green spill on the subject, background a single flat green color only with nothing else, every prop fully inside the frame with a clear empty green margin on the left and right borders, soft organic silhouettes only, nothing cropped or cut off by the left or right edge, no hard vertical cut lines. Seamlessly repeating left and right edges with no hard vertical seams — left and right borders empty or perfectly matching for a clean horizontal side-scrolling loop"
+    },
+    {
+      "slot": 3,
+      "role": "background",
+      "file": "layer-3-background.png",
+      "transparentPng": false,
+      "pixelArt": false,
+      "scale": 1,
+      "verticalOffsetPercent": 0,
+      "restoreGreenPercent": 0,
+      "hiddenInPreview": false,
+      "suggestedParallaxFactor": 0.3,
+      "prompt": "pixel art background: wide desert sky with pale orange sun, distant ruined smokestacks and hills, dusty atmosphere, soft gradient from warm to cool tones to imply distance. Seamlessly repeating left and right edges with no hard vertical seams — left and right borders empty or perfectly matching for a clean horizontal side-scrolling loop"
+    },
+    {
+      "slot": 4,
+      "role": "foreground",
+      "file": "layer-4-foreground.png",
+      "transparentPng": true,
+      "pixelArt": false,
+      "scale": 1.05,
+      "verticalOffsetPercent": 34,
+      "restoreGreenPercent": 0,
+      "hiddenInPreview": false,
+      "suggestedParallaxFactor": 1.35,
+      "prompt": "parallax foreground strip: many tiny near-ground accents lined up along a shared ground plane near the bottom third; 5–8 small rusted barrels, scraps, small rubble, and tiny pipes placed side by side with empty margins on left and right; consistent scale, no floating elements, set against a solid uniform pure chroma green screen background (#00b140), flat even lighting, crisp clean edges, no green spill on the subject, background a single flat green color only with nothing else, every prop fully inside the frame with a clear empty green margin on the left and right borders, soft organic silhouettes only, nothing cropped or cut off by the left or right edge, no hard vertical cut lines, about 5–8 very tiny accents all sitting on the same shared horizontal ground plane near the bottom third of the frame (like a parallax foreground strip the player runs past), none stacked above each other or floating at random heights, each only 8–12% of the frame height, generous empty green margin on left right and top so nothing is cut by any border. Seamlessly repeating left and right edges with no hard vertical seams — left and right borders empty or perfectly matching for a clean horizontal side-scrolling loop"
+    }
+  ]
+}

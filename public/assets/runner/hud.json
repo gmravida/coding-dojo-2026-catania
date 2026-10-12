@@ -1,0 +1,43 @@
+[
+  {
+    "key": "hud-operator",
+    "role": "health",
+    "character": "operator",
+    "url": "runner/hud-operator.png",
+    "width": 1200,
+    "height": 400,
+    "content": {
+      "x": 354,
+      "y": 172,
+      "w": 711,
+      "h": 76
+    }
+  },
+  {
+    "key": "hud-wafer",
+    "role": "health",
+    "character": "wafer",
+    "url": "runner/hud-wafer.png",
+    "width": 1200,
+    "height": 400,
+    "content": {
+      "x": 406,
+      "y": 158,
+      "w": 670,
+      "h": 94
+    }
+  },
+  {
+    "key": "hud-coins",
+    "role": "coins",
+    "url": "runner/hud-coins.png",
+    "width": 701,
+    "height": 247,
+    "content": {
+      "x": 243,
+      "y": 87,
+      "w": 404,
+      "h": 84
+    }
+  }
+]

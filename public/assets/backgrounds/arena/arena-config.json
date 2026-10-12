@@ -1,0 +1,30 @@
+{
+  "$comment": "Measured catalog of opaque, single-image arena backgrounds. Dimensions and PNG color mode were read from the real file headers. `walkableArea` was located by scanning the decoded pixels for the hazard-stripe curb that marks the back edge of the floor (row-density scan, not guessed) and runs from just past that stripe to the bottom of the image.",
+  "key": "industrial-arenas",
+  "type": "static-arena-set",
+  "baseUrl": "assets/backgrounds/arena/",
+  "arenas": [
+    {
+      "key": "arena-1",
+      "type": "image",
+      "file": "arena-1.png",
+      "format": "png",
+      "imageWidth": 1672,
+      "imageHeight": 941,
+      "aspectRatio": 1.776833,
+      "hasAlpha": false,
+      "walkableArea": { "x": 0, "y": 434, "w": 1672, "h": 507 }
+    },
+    {
+      "key": "arena-2",
+      "type": "image",
+      "file": "arena-2.png",
+      "format": "png",
+      "imageWidth": 1672,
+      "imageHeight": 941,
+      "aspectRatio": 1.776833,
+      "hasAlpha": false,
+      "walkableArea": { "x": 0, "y": 479, "w": 1672, "h": 462 }
+    }
+  ]
+}
